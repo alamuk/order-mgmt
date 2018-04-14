@@ -18,12 +18,16 @@ import { LoginComponent } from './auth/login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { ProductsModule } from './products/products.module';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    WelcomeComponent,
+    WelcomeComponent, 
   ],
   imports: [
     BrowserModule,
@@ -33,9 +37,12 @@ import { AppRoutingModule } from './app-routing.module';
     MaterialModule,
     OrdersModule, // DashboardComponent, SettingsComponent
     CustomersModule,
+    ProductsModule, // New module
     SuppliersModule,
     AppRoutingModule,
     FlexLayoutModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent],
