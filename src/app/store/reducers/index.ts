@@ -1,7 +1,11 @@
 /**
  * we set the state of what the route looks like.
  */
-import { Params } from '@angular/router';
+import {
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot,
+  Params,
+} from '@angular/router';
 
 import { ActionReducerMap, createFeatureSelector } from '@ngrx/store';
 
@@ -102,3 +106,27 @@ export const getRouterState = createFeatureSelector<
  * and replace the empty object with our reducers
  * StoreModule.forRoot(reducers)
  */
+<<<<<<< HEAD
+=======
+
+/**
+ * CUSTOM SERIALIZER
+ */
+export class CustomSerializer
+  implements fromRouter.RouterStateSerializer<RouterStateUrl> {
+  serialize(routerState: RouterStateSnapshot): RouterStateUrl {
+    const { url } = routerState;
+    const { queryParams } = routerState.root;
+
+    let state: ActivatedRouteSnapshot = routerState.root;
+
+    while (state.firstChild) {
+      state = state.firstChild;
+    }
+
+    const { params } = state;
+
+    return { url, queryParams, params };
+  }
+}
+>>>>>>> f2dd6f913ae404cd999b2df9566b581011628b99
