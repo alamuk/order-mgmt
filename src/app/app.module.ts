@@ -34,11 +34,12 @@ import { HeaderComponent } from "./nagivation/header/header.component";
 import { SidenavListComponent } from "./nagivation/sidenav-list/sidenav-list.component";
 import { environment } from "../environments/environment";
 
-import {CustomersComponent} from "./customers/containers/customers/customers.component";
+import { CustomersComponent } from "./customers/containers/customers/customers.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    CustomersComponent,
     SignupComponent,
     LoginComponent,
     WelcomeComponent
