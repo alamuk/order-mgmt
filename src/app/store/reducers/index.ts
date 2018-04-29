@@ -4,12 +4,12 @@
 import {
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
-  Params,
-} from '@angular/router';
+  Params
+} from "@angular/router";
 
-import { ActionReducerMap, createFeatureSelector } from '@ngrx/store';
+import { ActionReducerMap, createFeatureSelector } from "@ngrx/store";
 
-import * as fromRouter from '@ngrx/router-store';
+import * as fromRouter from "@ngrx/router-store";
 
 export interface RouterStateUrl {
   url: string;
@@ -88,7 +88,7 @@ export interface State {
  * StoreModule.forRoot(reducers)
  */
 export const reducers: ActionReducerMap<State> = {
-  routerReducer: fromRouter.routerReducer,
+  routerReducer: fromRouter.routerReducer
 };
 
 // selector
@@ -97,7 +97,7 @@ export const reducers: ActionReducerMap<State> = {
 
 export const getRouterState = createFeatureSelector<
   fromRouter.RouterReducerState<RouterStateUrl>
->('routerReducer');
+>("routerReducer");
 
 /**
  * we can now go to the app.module and register this reducer in
@@ -106,8 +106,6 @@ export const getRouterState = createFeatureSelector<
  * and replace the empty object with our reducers
  * StoreModule.forRoot(reducers)
  */
-<<<<<<< HEAD
-=======
 
 /**
  * CUSTOM SERIALIZER
@@ -129,4 +127,3 @@ export class CustomSerializer
     return { url, queryParams, params };
   }
 }
->>>>>>> f2dd6f913ae404cd999b2df9566b581011628b99
