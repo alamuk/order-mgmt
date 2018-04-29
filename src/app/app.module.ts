@@ -34,7 +34,7 @@ import { HeaderComponent } from "./nagivation/header/header.component";
 import { SidenavListComponent } from "./nagivation/sidenav-list/sidenav-list.component";
 import { environment } from "../environments/environment";
 
-import { ProductsModule } from "./products/products.module";
+import {CustomersComponent} from "./customers/containers/customers/customers.component";
 
 @NgModule({
   declarations: [
@@ -51,7 +51,6 @@ import { ProductsModule } from "./products/products.module";
     MaterialModule,
     OrdersModule, // DashboardComponent, SettingsComponent
     CustomersModule,
-    ProductsModule, // New module
     SuppliersModule,
     AppRoutingModule,
     FlexLayoutModule
